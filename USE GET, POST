@@ -1,8 +1,6 @@
-1.
-On the “collections” tab click on the “+” button to create a new collection. A new collection will appear and you will be able to edit its name, description, and many other settings.
+1. On the “collections” tab click on the “+” button to create a new collection. A new collection will appear and you will be able to edit its name, description, and many other settings.
 
-2.
-In the workspace GET
+2. In the workspace GET
 
 Set your HTTP request to GET.
 In the request URL field, input link
@@ -10,8 +8,7 @@ Click Send
 You will see 200 OK Message
 There should be 10 user results in the body which indicates that your test has run successfully.
 
-3.
- In the new tab POST
+3. In the new tab POST
 
 Set your HTTP request to POST.
 Input the same link in request url 
