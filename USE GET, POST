@@ -1,0 +1,29 @@
+1.
+On the “collections” tab click on the “+” button to create a new collection. A new collection will appear and you will be able to edit its name, description, and many other settings.
+
+2.
+In the workspace GET
+
+Set your HTTP request to GET.
+In the request URL field, input link
+Click Send
+You will see 200 OK Message
+There should be 10 user results in the body which indicates that your test has run successfully.
+
+3.
+ In the new tab POST
+
+Set your HTTP request to POST.
+Input the same link in request url 
+switch to the Body tab
+
+In Body,
+
+Click raw
+Select JSON
+
+Copy and paste just one user result from the previous get request. Change id to 11 and name to any desired name. You can also change other details like the address.
+
+Click Send.
+Status: 201 Created should be displayed
+Posted data are showing up in the body.
