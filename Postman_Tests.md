@@ -1,6 +1,6 @@
 ## TEST 1
 
-1. Go to your GET user request from the previous tutorial.
+1. Go to your GET.
 
 2. Switch to the tests tab. On the right side are snippet codes.
 
