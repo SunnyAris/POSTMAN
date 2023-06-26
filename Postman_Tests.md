@@ -338,8 +338,8 @@ pm.test("Status code name has string", function () {
 ``` 
 
 
-post - created 
-get - ok 
+- post - created 
+- get - ok 
 
 
 
