@@ -29,7 +29,7 @@ pm.test("Status code is 200", () => {
     pm.response.to.have.status(200);
 });
 ```
-1. Copy an paste in onother request on test tab
+1. Copy an paste in another request on test tab
 2. Click send 
 3. 
    If test fail with 201 or 204 change 200 to 201 or 204
@@ -231,3 +231,20 @@ pm.test("IS in stock", () => {
     pm.expect(response['current-stock']). to. be. above(0);
 });
 ```
+If we want this test to fail change id book to the book that is not available.
+
+
+## Colection runner
+
+1. On the bottom click `Runner`
+2. Drop all collection request on `RUN ORDER`
+3. On the right click `Save responses`
+4. Click `Run`
+5. We will get all the tests done (on the all test we will see with test will pass and with will fail)
+6. We can add `postman.setNextRequest("name of the next test");`
+   in `Request` on `Test` to skip next test and set with test will be executed next.
+7. Click Run on the Colection runner and runner skip some tests that we wil ad on the 6.
+8. We can mowe skiped tests on the bottom on the Collection
+9. If we want runner to stop on the last Request we can add `postman.setNextRequest(null);`
+10. If on `postman.setNextRequest(name of some request);` we add for example "name of some Request"  instead `null` the runner will not stop and will be run forever.
+11. To automate this we can Create a monitor.
