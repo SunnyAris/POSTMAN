@@ -87,21 +87,6 @@ pm.test("Status should be OK", ()=> {
 Fail
 
 
-## TEST 
-
-1. From the snippets section, click on “Response body:JSON value check”. We will be checking if Leanne Graham has the userid 1.
-
-2. Replace “Your Test Name” from the code with “Check if user with id1 is Leanne Graham” so that the test name specifies exactly what we want to test.
-
-3. Replace jsonData.value with jsonData[0].name. 
-
-4. To get the path, check the body in Get result earlier. 
-
-5. Since Leanne Graham is userid 1, jsonData is in the first result which should start with 0. 
-
-6. If you want to get the second result, use jsonData[1] and so on for succeeding results.
-
-7. In to eql, input “Leanne Graham”
 
 
 ## TEST 
@@ -248,3 +233,23 @@ If we want this test to fail change id book to the book that is not available.
 9. If we want runner to stop on the last Request we can add `postman.setNextRequest(null);`
 10. If on `postman.setNextRequest(name of some request);` we add for example "name of some Request"  instead `null` the runner will not stop and will be run forever.
 11. To automate this we can Create a monitor.
+
+
+
+
+
+## TEST 
+
+1. From the snippets section, click on “Response body:JSON value check”. We will be checking if Leanne Graham has the userid 1.
+
+2. Replace “Your Test Name” from the code with “Check if user with id1 is Leanne Graham” so that the test name specifies exactly what we want to test.
+
+3. Replace jsonData.value with jsonData[0].name. 
+
+4. To get the path, check the body in Get result earlier. 
+
+5. Since Leanne Graham is userid 1, jsonData is in the first result which should start with 0. 
+
+6. If you want to get the second result, use jsonData[1] and so on for succeeding results.
+
+7. In to eql, input “Leanne Graham”
