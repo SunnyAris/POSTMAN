@@ -187,3 +187,47 @@ to
 ```
 pm.globals.set("bookId",book.id);
 ```
+1. Click send 
+2. We will get pass book found
+   
+add 
+```
+pm.expect(book.type).to.eql("non-fiction");
+
+```
+
+this is testing params of type non-fiction book
+
+
+## TEST Fail
+
+Change true to 111 
+```
+const nonFictionBook = response.filter((book)=> book.available === true);
+```
+```
+const nonFictionBook = response.filter((book)=> book.available === 111);
+```
+We will get an error postman
+
+```
+
+const nonFictionBook = response.filter((book)=> book.available === 111);
+
+ if (book) {
+    pm.globals.set("bookId",book.id);
+}
+```
+after this we will get test fail 
+
+
+## TEST is in stock
+If we hawe a information in response about current stock we can test if the book is available and is in stock
+
+```
+
+const response = pm.response.jeson();
+pm.test("IS in stock", () => {
+    pm.expect(response['current-stock']). to. be. above(0);
+});
+```
