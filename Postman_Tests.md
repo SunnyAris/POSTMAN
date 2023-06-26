@@ -241,6 +241,13 @@ If we want this test to fail change id book to the book that is not available.
 ## TEST 
 
 1. From the snippets section, click on “Response body:JSON value check”. We will be checking if Leanne Graham has the userid 1.
+```
+pm.test("Your test name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.value).to.eql(100);
+});
+```
+
 
 2. Replace “Your Test Name” from the code with “Check if user with id1 is Leanne Graham” so that the test name specifies exactly what we want to test.
 
@@ -253,3 +260,91 @@ If we want this test to fail change id book to the book that is not available.
 6. If you want to get the second result, use jsonData[1] and so on for succeeding results.
 
 7. In to eql, input “Leanne Graham”
+
+
+
+1. From the snippets section, click on “Response body:JSON value check”. 
+
+```
+pm.test("Your test name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.value).to.eql(100);
+});
+```
+2. Replace “Your Test Name” from the code with for example “Expected Janet at Data[1].first_name ” so that the test name specifies exactly what we want to test.
+
+```
+pm.test(“Expected Janet at Data[1].first_name”, function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.[1].first_name).to.eql('Janet');
+});
+```
+
+
+
+## TEST  Body
+
+1. From the snippets section, click on `Response body: contains string`
+
+```pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("string_you_want_to_search");
+});
+```
+
+2. Add strings
+
+```
+pm.test("Body matches string", function () {
+    pm.expect(pm.response.text()).to.include("page"); 
+    pm.expect(pm.response.text()).to.include("per_page");
+    pm.expect(pm.response.text()).to.include("total");
+    pm.expect(pm.response.text()).to.include("total_pages");
+
+});
+
+```
+3. Klick send. You will get pass 200
+4. If you want test to fail change string to incorrect boddy will not maching
+
+
+## TEST  Content- type header check 
+
+```
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
+```
+
+
+``` pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+```
+
+
+```
+
+pm.test("Successful POST request", function () {
+    pm.expect(pm.response.code).to.be.oneOf([201, 202]);
+});
+```
+
+
+```
+pm.test("Status code name has string", function () {
+    pm.response.to.have.status("Created");
+});
+``` 
+
+
+post - created 
+get - ok 
+
+
+
+
+
+
+
+
