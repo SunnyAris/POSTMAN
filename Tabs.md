@@ -1,6 +1,21 @@
 # Tabs
 
 
+## Params
+
+To send a query parameter, add it directly to the URL or open Params and enter the name and value. When you enter your query parameters in either the URL or the Params fields, these values will update everywhere they're used in Postman.
+
+Path parameters form part of the request URL, and are referenced using placeholders preceded by ` : ` as in the following example: `/customer/:id`
+
+To send a path parameter, enter the parameter name into the URL field, after a colon, for example `:id`. When you enter a path parameter, Postman will populate it in the Params tab, where you can also edit it.
+
+
+
+You can add descriptions to your parameters and they'll appear for anyone sharing the request (for example in your workspace) or viewing your API documentation.
+
+![Alt text](image-11.png)
+
+
 ## Authenticating requests
 
 Some APIs require auth details you can send in Postman. Authentication involves confirming the identity of the client sending a request, and authorization involves confirming that the client has permission to carry out the endpoint operation. Open the Authorization tab to configure your access details.
@@ -26,6 +41,19 @@ If you need to change a header, you can do so in the relevant part of Postman, f
 
 
 To send body data with requests whenever you need to add or update structured data. For example, if you're sending a request to add a new customer to a database, you might include the customer details in JSON. Typically you will use body data with PUT, POST, and PATCH requests.
+
+## Headers
+
+Postman will automatically add certain headers to your requests based on your request selections and settings. Select hidden at the top of the headers tab for information about what Postman will send with your request.
+
+If you need to change a header, you can do so in the relevant part of Postman, for example the Authorization tab, the request Body, Cookies for the request domain, the Settings, and in some cases directly in the Headers tab itself.
+
+![Alt text](image-12.png)
+
+If a header has been added based on your auth setup, select the Authorization tab to change it.
+
+To alter cookie headers, change the cookie setup for the domain you're sending the request to.
+
 
 ## Body
 Response body
@@ -79,9 +107,17 @@ Use binary data to send information you can't enter manually in the Postman edit
 ### GraphQL
 Send GraphQL queries with your Postman requests by selecting the GraphQL tab in the request Body. Enter your code in the Query area and any variables in the GraphQL Variables section.
 
+## Pre-request script
 
+You can use pre-request scripts in Postman to execute JavaScript before a request runs. By including code in the Pre-request Script tab for a request, collection, or folder, you can carry out pre-processing such as setting variable values, parameters, headers, and body data. You can also use pre-request scripts for debugging code, for example by logging output to the console.
 
+### An example usage of pre-request scripting could be as follows:
 
+- You have a series of requests in a collection and are running them in a sequence, such as when using the collection runner.
+- The second request is dependent on a value returned from the first request.
+- The value needs to be processed before you pass it to the second request.
+- The first request sets the data value from a response field to a variable in its Tests script.
+- The second request retrieves the value and processes it in its Pre-request Script, then sets the processed value to a variable (which is referenced in the second request, for example in its parameters).
 
 
 
