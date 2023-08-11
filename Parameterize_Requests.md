@@ -14,8 +14,8 @@
 
 In variable,
 
-set the name to the url which is https://jsonplaceholder.typicode.com
-click Save.
+1. Set the name to the url which is https://jsonplaceholder.typicode.com
+2. click Save.
 
 
 Go back to your Get request then click send. There should now be results for your request.
