@@ -54,6 +54,21 @@ Examples of dynamic variables include:
 `{{$randomInt}}`: A random integer between 0 and 1000
 
 
+### Logging variables
+You can log variable values to the Postman Console while your requests run.
+
+Use the following syntax in your script to log the value of a variable:
+
+`console.log(pm.variables.get("variable_key"));`
+
+To view the results, select Console icon Console in the footer. You can also access the console by selecting View > Show Postman Console.
 
 
+![Alt text](image-19.png)
+
+
+As you add variables to your requests, Postman prompts you with any that are currently defined.
+
+
+![Alt text](image-20.png)
 
